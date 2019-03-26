@@ -89,11 +89,6 @@ gulp.task('copy', function() {
     }));
 });
 
-gulp.task('copy-img', function() {
-  return gulp.src('.src/images/*')
-    .pipe(gulp.dest('./dest'));
-});
-
 // Server
 
 gulp.task('server', function() {
@@ -156,8 +151,7 @@ gulp.task('build', gulp.parallel(
   'html',
   'styles',
   'scripts',
-  'copy',
-  'copy-img'
+  'copy'
 ));
 
 // Deploy
